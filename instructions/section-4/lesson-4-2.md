@@ -17,7 +17,6 @@ Merge your pull request from the previous lesson (if you haven't already):
 
 [View tutorial](../common/how-to-merge.md)
 
-
 Checkout your main branch and pull changes:
 
     git checkout main
@@ -33,69 +32,68 @@ Now, open the project directory in your code editor and continue to the next sec
 
 #### Create a JavaScript file
 
-- [ ] Create a folder called `js/` at the root level (the same level as your instructions folder and index.html file)
-- [ ] Inside that folder, create a JavaScript file called `index.js`
+- [x] Create a folder called `js/` at the root level (the same level as your instructions folder and index.html file)
+- [x] Inside that folder, create a JavaScript file called `index.js`
 
 #### Link your JavaScript file to your HTML file
 
-- [ ] Open your `index.html` file
-- [ ] Before the closing `</body>` tag, insert a `<script>` element with a `src` attribute that specifies the relative path to your JavaScript file (i.e. `js/index.js`)
-- [ ] Save and open the index.html file in your browser
+- [x] Open your `index.html` file
+- [x] Before the closing `</body>` tag, insert a `<script>` element with a `src` attribute that specifies the relative path to your JavaScript file (i.e. `js/index.js`)
+- [x] Save and open the index.html file in your browser
 
 #### Add Footer Element
 
-- [ ] Open your `index.html` file
-- [ ] Above the `<script>` element, add an empty `<footer>` element
-- [ ] Save and refresh your browser
+- [x] Open your `index.html` file
+- [x] Above the `<script>` element, add an empty `<footer>` element
+- [x] Save and refresh your browser
 
 #### Insert Copyright Text in Footer via JavaScript
 
-- [ ] Open your `index.js` file
+- [x] Open your `index.js` file
 
-- [ ] Create a new date object and store it in a variable named `today`
+- [x] Create a new date object and store it in a variable named `today`
   - hint: `new Date()` constructor
-- [ ] Retrieve the current year from your date object and store it in a variable named `thisYear`
+- [x] Retrieve the current year from your date object and store it in a variable named `thisYear`
+
   - hint: `getFullYear` method
 
-- [ ] Using "DOM Selection", select the `<footer>` element from the DOM and store it in a variable named `footer`
+- [x] Using "DOM Selection", select the `<footer>` element from the DOM and store it in a variable named `footer`
   - hint: `querySelector` method
-- [ ] Create a new paragraph (`p`) element and store it in a variable named `copyright`
+- [x] Create a new paragraph (`p`) element and store it in a variable named `copyright`
   - hint: `createElement` method
-- [ ] Set the inner HTML of your `copyright` element to display your name and the current year
+- [x] Set the inner HTML of your `copyright` element to display your name and the current year
   - hint: use `thisYear` variable from earlier
-- [ ] Using "DOM Manipulation", append the `copyright` element to the footer
+- [x] Using "DOM Manipulation", append the `copyright` element to the footer
   - hint: `appendChild` method
-- [ ] Save and refresh your browser
+- [x] Save and refresh your browser
   - You should see the text "Your Name 2021" at the bottom of the page
 
-**STRETCH GOAL** the next checkbox is optional.  If you'd like to stretch your skills an knowledge attempt it:
+**STRETCH GOAL** the next checkbox is optional. If you'd like to stretch your skills an knowledge attempt it:
 
 - [ ] Use unicode to insert a copyright symbol in front of the year <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" target="_blank">Learn more about unicode</a>
 
-
-
 #### Add Skills Section
 
-- [ ] Open your `index.html` file
-- [ ] Above the "Connect" section, add a new `<section>` element with an `id` attribute of value "skills"
-- [ ] Inside the new section, add a `<h2>` element that says "Skills"
-- [ ] After the `<h2>` element, add an empty unordered list (`<ul>`) element
-- [ ] Save and refresh your browser
+- [x] Open your `index.html` file
+- [x] Above the "Connect" section, add a new `<section>` element with an `id` attribute of value "skills"
+- [x] Inside the new section, add a `<h2>` element that says "Skills"
+- [x] After the `<h2>` element, add an empty unordered list (`<ul>`) element
+- [x] Save and refresh your browser
   - You should see the new "Skills" heading
 
 #### Create List of Skills
 
-- [ ] Open your `index.js` file
-- [ ] List your technical skills by creating an Array of String values and store it in a variable named `skills`
-- [ ] Using "DOM Selection", select the #skills section by id and store it in a variable named `skillsSection`
+- [x] Open your `index.js` file
+- [x] List your technical skills by creating an Array of String values and store it in a variable named `skills`
+- [x] Using "DOM Selection", select the #skills section by id and store it in a variable named `skillsSection`
   - hint: `querySelector` or `getElementById` method
-- [ ] Using "DOM Selection", query the `skillsSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `skillsList`
-- [ ] Create a `for` loop to iterate over your `skills` Array, starting at index 0
-- [ ] Inside the loop, create a new list item (`li`) element and store it in a variable named `skill`
+- [x] Using "DOM Selection", query the `skillsSection` (instead of the entire `document`) to find the `<ul>` element and store it in a variable named `skillsList`
+- [x] Create a `for` loop to iterate over your `skills` Array, starting at index 0
+- [x] Inside the loop, create a new list item (`li`) element and store it in a variable named `skill`
   - hint: `createElement` method
-- [ ] On the next line, set the inner text of your `skill` variable to the value of the current Array element
+- [0] On the next line, set the inner text of your `skill` variable to the value of the current Array element
   - hint: access the Array element using bracket notation
-- [ ] On the next line, append the `skill` element to the `skillsList` element
+- [x] On the next line, append the `skill` element to the `skillsList` element
   - hint: `appendChild` method
 - Save and refresh your browser
   - You should see your list of skills beneath the "Skills" heading
