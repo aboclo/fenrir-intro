@@ -6,16 +6,18 @@
     <meta name="author" content="Ashley Bocanegra" />
     <meta name="description" content="An about me page/portfolio" />
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
     <div>
       <header>
-        <h1>My Portfolio</h1>
+        <img src="images/picture.jpeg" alt="A photo of me." />
+        <h1>Ashley Bocanegra</h1>
       </header>
       <main>
-        <section>
-          <h2>About</h2>
+        <section class="sectionspacing">
+          <h2 class="headings">About</h2>
           <p>
             I currently work as a Manager/Data evaluator. I have been working as
             a Manager at a cleaning company for about 3 years now. In this role
@@ -28,29 +30,32 @@
           </p>
         </section>
 
-        <section>
-          <h2>Experience</h2>
+        <section class="sectionspacing">
+          <h2 class="headings">Experience</h2>
 
           <ul>
-            <li>
-              Casa Limpia - Hillsborough, NC - Manager: July 2020 - Present
+            <li class="boxborder container">
+              <h3 class="text">Manager - Casa Limpia</h3>
+              <p class="dates textright">July 2020 - Present</p>
             </li>
-            <li>
-              Shift 4 Payments - Morrisville, NC - Marketing Associate: October
-              2019 - April 2020
+            <li class="boxborder container">
+              <h3 class="text">Marketing Associate - Shift 4 Payments</h3>
+              <p class="dates textright">October 2019 - April 2020</p>
             </li>
-            <li>
-              Prioritize Success LLC - Remote - Social Media Marketing Intern:
-              October 2019 - January 2020
+            <li class="boxborder container">
+              <h3 class="text">
+                Social Media Marketing Intern - Prioritize Success LLC
+              </h3>
+              <p class="dates textright">October 2019 - January 2020</p>
             </li>
           </ul>
         </section>
-        <section id="skills">
-          <h2>Skills</h2>
-          <ul></ul>
+        <section id="skills" class="sectionspacing">
+          <h2 class="define headings">Skills</h2>
+          <ul class="skills"></ul>
         </section>
-        <section>
-          <h2>Conntect</h2>
+        <section class="sectionspacing">
+          <h2 class="headings">Connect</h2>
           <p>
             <strong>Gmail:</strong>
             <a href="mailto:ashleybocanegra1196@gmail.com?subject=Hello!"
@@ -64,23 +69,41 @@
         </section>
       </main>
     </div>
-    <section>
-      <h2>Leave a Message!</h2>
+    <section class="sectionspacing">
+      <h2 class="headings">Leave a Message!</h2>
       <form name="leave_message">
         <label for="uName">Name:</label><br />
-        <input type="text" id="uName" name="usersName" required /><br />
+        <input
+          type="text"
+          id="uName"
+          name="usersName"
+          required
+          class="textinput"
+        /><br />
 
         <label for="uEmail">Email:</label><br />
-        <input type="email" id="uEmail" name="usersEmail" required /><br />
+        <input
+          type="email"
+          id="uEmail"
+          name="usersEmail"
+          required
+          class="textinput"
+        /><br />
 
         <label for="uMessage">Message:</label><br />
-        <textarea name="usersMessage" id="uMessage"></textarea><br />
+        <textarea
+          name="usersMessage"
+          id="uMessage"
+          required
+          class="textinput"
+        ></textarea
+        ><br />
 
-        <button type="submit">Submit</button><br />
+        <button type="submit" class="button">Submit</button><br />
       </form>
     </section>
-    <section id="messages">
-      <h2>Messages</h2>
+    <section id="messages" class="sectionspacing">
+      <h2 class="headings">Messages</h2>
       <ul></ul>
     </section>
     <footer></footer>
