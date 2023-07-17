@@ -21,7 +21,6 @@ Merge your pull request from the previous lesson (if you haven't already):
 
 [View tutorial](../common/how-to-merge.md)
 
-
 Checkout your main branch and pull changes:
 
     git checkout main
@@ -37,13 +36,13 @@ Now, open the project directory in your code editor and continue to the next sec
 
 For this assignment, you will be transforming your webpage with a more robust grid layout.
 
-- [ ] Add a navigational header to your webpage
-  - [ ] The navigation menu should include a link to each of your sections (i.e. "About", "Experience", etc.)
-  - [ ] (Optional Stretch Goal) Make the header sticky/fixed on the page
+- [x] Add a navigational header to your webpage
+  - [x] The navigation menu should include a link to each of your sections (i.e. "About", "Experience", etc.)
+  - [x] (Optional Stretch Goal) Make the header sticky/fixed on the page
 - [ ] Change the layout of your "Experience" section using rows and columns so items are displayed in a grid rather than a list
   - [ ] Hint: use either Flexbox or CSS Grid
-- [ ] Update the "Leave a Message" form to use Flexbox or CSS Grid
-- [ ] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) **Note:** You can use mobile-first or desktop-first process, but whichever you choose, be sure to properly write your media queries and make some change in at least one element for each of the three device sizes
+- [x] Update the "Leave a Message" form to use Flexbox or CSS Grid
+- [x] Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) **Note:** You can use mobile-first or desktop-first process, but whichever you choose, be sure to properly write your media queries and make some change in at least one element for each of the three device sizes
 
 This is the basic rubric, but we encourage you to think beyond this list and come up with your own ideas to make your webpage unique!
 
