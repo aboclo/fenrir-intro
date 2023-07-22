@@ -35,10 +35,6 @@ messageForm.addEventListener("submit", (event) => {
   const email = event.target.usersEmail;
   const message = event.target.usersMessage;
 
-  console.log(name.value);
-  console.log(email.value);
-  console.log(message.value);
-
   const messageSection = document.getElementById("messages");
   const messageList = messageSection.querySelector("ul");
   const newMessage = document.createElement("li");
@@ -61,4 +57,26 @@ messageForm.addEventListener("submit", (event) => {
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
   messageForm.reset();
+});
+
+const githubRequest = new XMLHttpRequest();
+const url = "https://api.github.com/users/aboclo/repos";
+
+githubRequest.open("GET", url);
+githubRequest.send();
+
+githubRequest.addEventListener("load", (event) => {
+  const repositories = JSON.parse(githubRequest.response);
+
+  const projectSection = document.getElementById("projects");
+  const projectList = projectSection.querySelector("ul");
+
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement("li");
+    const projectLinks = document.createElement("a");
+    projectLinks.href = repositories[i].html_url;
+    projectLinks.textContent = repositories[i].name;
+    project.appendChild(projectLinks);
+    projectList.appendChild(project);
+  }
 });
