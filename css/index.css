@@ -15,20 +15,18 @@ img {
   max-height: 100px;
   border: 1px solid rgb(252, 252, 252);
   border-radius: 75px;
-  padding: 10px;
-  margin-left: 50px;
+  margin-left: 50px; /* causing error? */
 }
 
 /* navigation header */
 .nav_links {
-  padding: 15px;
+  padding: 25px;
   list-style: none;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
 }
 .nav_links li {
-  padding: 10px;
   margin-right: 15px;
 }
 .nav_links a:link {
@@ -74,8 +72,57 @@ img {
   grid-gap: 15px;
   list-style: none;
   text-align: center;
+  cursor: pointer;
 }
 
+/* Modal container */
+.exp-Container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styling for the modal */
+.expStyle {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background-color: rgb(211, 211, 188);
+  border-color: rgb(211, 211, 188);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the close button */
+.exp-close {
+  float: right;
+  cursor: pointer;
+}
+
+/* Download Resume Button */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  background-color: rgba(163, 163, 128, 0.25);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 10px;
+}
+.btn:hover {
+  font-weight: bold;
+  background-color: rgb(195, 195, 154);
+}
 /* Skills Section */
 .skillsboxes {
   padding: 0.5rem;
@@ -83,7 +130,11 @@ img {
   border-radius: 15px;
   margin: 5px;
 }
-
+/* Projects */
+.projectStyle {
+  margin-bottom: 15px;
+  list-style: none;
+}
 /* Connect Section */
 a:link {
   text-decoration: none;
@@ -135,16 +186,34 @@ form {
   display: flex;
 }
 
+/* Scroll to top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: rgb(160, 166, 151);
+  background-color: rgb(160, 166, 151);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+#myBtn:hover {
+  font-weight: bold;
+}
+
 /* Footer */
 footer {
-  background-color: rgba(239, 235, 206, 0.5);
+  background-color: rgba(213, 209, 187, 0.5);
   text-align: center;
   padding: 2px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1rem;
 }
 /* Mobile Viewing */
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
   .main_header,
   .nav_links {
     display: flex;
@@ -195,12 +264,19 @@ footer {
 /* Desktop Viewing */
 @media screen and (min-width: 1024px) {
   .main_header {
+    display: flex;
     flex-direction: row;
-    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 50px;
   }
   .header_text {
-    margin-bottom: 25px;
+    margin: auto; /*----?---*/
+  }
+  .nav_links {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
   }
   section p {
     margin-left: 40px;
@@ -219,9 +295,9 @@ footer {
   textarea,
   .textinput,
   button {
+    display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     margin-left: 20px;
-    margin-bottom: 1px;
   }
 }
