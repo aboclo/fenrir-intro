@@ -41,19 +41,37 @@
         <section id="experience" class="sectionspacing experience">
           <h2 class="headings">Experience</h2>
           <ul class="grid-container">
-            <li class="boxborder">
+            <li class="boxborder" onclick="openExp('casaLimpia')">
               <h3>Manager - Casa Limpia</h3>
               <p class="dates">July 2020 - Present</p>
             </li>
-            <li class="boxborder">
+            <li class="boxborder" onclick="openExp('shiftFour')">
               <h3>Marketing Associate - Shift 4 Payments</h3>
               <p class="dates">October 2019 - April 2020</p>
             </li>
-            <li class="boxborder">
+            <li class="boxborder" onclick="openExp('prioritizeSuccess')">
               <h3>Social Media Marketing Intern - Prioritize Success LLC</h3>
               <p class="dates">October 2019 - January 2020</p>
             </li>
           </ul>
+        </section>
+
+        <div id="expContainer" class="exp-Container" onclick="closeExp()">
+          <div class="expStyle">
+            <span class="exp-close" onclick="closeExp(event)">&times;</span>
+            <p id="expText"></p>
+          </div>
+        </div>
+        <section>
+          <div class="button-container">
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <button id="download-button" class="btn">
+              <i class="fa fa-download"></i> Download
+            </button>
+          </div>
         </section>
 
         <section id="skills" class="sectionspacing">
@@ -117,6 +135,9 @@
     <section id="messages" class="sectionspacing">
       <h2 class="headings">Messages</h2>
       <ul></ul>
+    </section>
+    <section>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </section>
     <footer></footer>
     <script src="js/index.js"></script>
