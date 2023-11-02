@@ -28,7 +28,7 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
-//Form element
+//Form & Message element
 const messageForm = document.querySelector('form[name="leave_message"]');
 
 messageForm.addEventListener("submit", (event) => {
@@ -44,7 +44,7 @@ messageForm.addEventListener("submit", (event) => {
   newMessage.classList.add("listedmessages");
 
   newMessage.innerHTML = `<a href="mailto:${email.value}">${name.value}</a>
-  <span>wrote: ${message.value} </span>`;
+  <span> wrote: ${message.value} </span>`;
 
   const removeButton = document.createElement("button");
   removeButton.classList.add("buttonremove");
@@ -55,12 +55,27 @@ messageForm.addEventListener("submit", (event) => {
     const entry = removeButton.parentNode;
 
     entry.remove();
+    checkMessages();
   });
 
   newMessage.appendChild(removeButton);
   messageList.appendChild(newMessage);
+  checkMessages();
   messageForm.reset();
 });
+
+//Display Message heading
+function checkMessages() {
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul");
+
+  if (messageList.children.length === 0) {
+    messageSection.style.display = "none";
+  } else {
+    messageSection.style.display = "block";
+  }
+}
+checkMessages();
 
 //Project Links
 fetch("https://api.github.com/users/aboclo/repos")
